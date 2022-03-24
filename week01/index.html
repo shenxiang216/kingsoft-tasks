@@ -2,7 +2,7 @@
  * @Author: Deep Lane
  * @Date: 2022-03-23 13:25:12
  * @LastEditors: Deep Lane
- * @LastEditTime: 2022-03-23 16:03:01
+ * @LastEditTime: 2022-03-24 11:57:49
  * @Description: 
 -->
 <!DOCTYPE html>
@@ -57,6 +57,7 @@
             <span style="margin-left: 5px">345</span>
           </div>
         </a>
+
         <a class="content">
           <div style="position: relative">
             <img class="content_img" src="./imgs/sku-2.jpg" />
@@ -75,6 +76,7 @@
             <span style="margin-left: 5px">345</span>
           </div>
         </a>
+
         <a class="content">
           <div style="position: relative">
             <img class="content_img" src="./imgs/sku-3.jpg" />
@@ -93,6 +95,7 @@
             <span style="margin-left: 5px">345</span>
           </div>
         </a>
+
         <a class="content">
           <div style="position: relative">
             <img class="content_img" src="./imgs/sku-4.jpg" />
@@ -129,5 +132,28 @@
         </a>
       </main>
     </div>
+    <script type="text/javascript">
+      // 以 375 的设备宽度为基准，375 下 10px 为 1rem
+      ;((doc, win) => {
+        let docEl = doc.documentElement,
+          resizeEvt =
+            "orientationchange" in window ? "orientationchange" : "resize",
+          recalc = function () {
+            let clientWidth = docEl.clientWidth
+            if (!clientWidth) {
+              return
+            }
+            if (10 * (clientWidth / 375) > 20) {
+              docEl.style.fontSize = "20px"
+              return
+            }
+            docEl.style.fontSize = 10 * (clientWidth / 375) + "px"
+          }
+
+        if (!doc.addEventListener) return
+        win.addEventListener(resizeEvt, recalc, false)
+        doc.addEventListener("DOMContentLoaded", recalc, false)
+      })(document, window)
+    </script>
   </body>
 </html>
