@@ -1,0 +1,16 @@
+C:\Users\76812\Desktop\2022-React\tasks\week02
+├─index.html
+├─README.md
+├─test.html
+├─style
+|   └style.css
+├─js
+| └index.js
+├─imgs
+|  ├─cover_play.png
+|  ├─icon_listen.png
+|  ├─icon_play.png
+|  ├─jingling.png
+|  └qqmusic.png
+├─db
+| └task.json
