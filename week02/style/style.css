@@ -1,9 +1,11 @@
 :root {
   --primary-color: #31c27c;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   background: #f5f5f5;
@@ -11,6 +13,7 @@ body {
   font-size: 14px;
   min-width: 1000px;
 }
+
 header {
   height: 90px;
   background: #fff;
@@ -21,11 +24,13 @@ header {
 h1 {
   text-align: center;
 }
+
 .TopImage {
   width: 1200px;
   margin: auto;
 }
-main {
+
+.wrapper {
   width: 1200px;
   margin: auto;
 }
@@ -34,12 +39,14 @@ section {
   padding: 47px 0 22px 0;
   background-image: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
 }
+
 .recommended {
   width: 196px;
   background-image: url(../imgs/jingling.png);
   margin: 0 auto;
   height: 31px;
 }
+
 .new_start {
   width: 196px;
   background-image: url(../imgs/jingling.png);
@@ -47,6 +54,7 @@ section {
   margin: 0 auto;
   height: 31px;
 }
+
 .mv {
   width: 196px;
   background-image: url(../imgs/jingling.png);
@@ -54,7 +62,8 @@ section {
   margin: 0 auto;
   height: 31px;
 }
-h2 > i {
+
+h2>i {
   font-size: 0;
 }
 
@@ -62,6 +71,7 @@ a {
   text-decoration: none;
   color: #000;
 }
+
 .TopLabel {
   margin-top: 24px;
   margin-bottom: 30px;
@@ -70,6 +80,7 @@ a {
   justify-content: center;
   position: relative;
 }
+
 .labelItem {
   display: inline-block;
   padding: 0 8px;
@@ -79,18 +90,22 @@ a {
   text-decoration: none;
   font-size: 15px;
 }
+
 .labelItemActive {
   color: var(--primary-color);
 }
+
 .labelItem:not(.labelItemActive):hover {
   color: var(--primary-color);
 }
+
 .list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
   margin-bottom: 45px;
 }
+
 .cover-wrap {
   display: flex;
   position: relative;
@@ -102,10 +117,12 @@ a {
   justify-content: center;
   cursor: pointer;
 }
+
 .cover-img {
   width: 100%;
   transition: all 0.75s;
 }
+
 .cover-mask {
   position: absolute;
   left: 0;
@@ -116,6 +133,7 @@ a {
   opacity: 0;
   transition: all 0.5s;
 }
+
 .cover-play {
   position: absolute;
   left: 50%;
@@ -126,32 +144,40 @@ a {
   transform: scale(0.7);
   transition: all 0.5s;
 }
+
 .cover-wrap:hover .cover-mask {
   opacity: 0.2;
 }
+
 .cover-wrap:hover .cover-play {
   opacity: 1;
   transform: scale(1);
 }
+
 .cover-wrap:hover .cover-img {
   transform: scale(1.07);
 }
+
 .nowrap {
   white-space: nowrap;
   overflow: hidden;
 
   text-overflow: ellipsis;
 }
+
 .album-title {
   width: 150px;
 }
+
 .album-title:hover {
   color: var(--primary-color);
 }
+
 .album-author {
   color: #999;
   line-height: 1.6;
 }
+
 .album-author:hover {
   color: var(--primary-color);
 }
@@ -174,6 +200,7 @@ a {
   box-sizing: border-box;
   overflow: hidden;
 }
+
 .icon_play {
   width: 13px;
   height: 16px;
@@ -181,6 +208,7 @@ a {
   position: relative;
   margin-right: 2px;
 }
+
 .newmusic-wrap {
   display: flex;
   position: relative;
@@ -192,21 +220,26 @@ a {
   justify-content: center;
   cursor: pointer;
 }
+
 .newmusic-img {
   width: 86px;
   height: 86px;
   transition: all 0.75s;
 }
+
 .newmusic-wrap:hover .cover-mask {
   opacity: 0.2;
 }
+
 .newmusic-wrap:hover .cover-play {
   opacity: 1;
   transform: scale(0.58);
 }
+
 .newmusic-wrap:hover .newmusic-img {
   transform: scale(1.07);
 }
+
 .newmusic {
   display: flex;
   flex-direction: row;
@@ -214,6 +247,7 @@ a {
   justify-content: left;
   position: relative;
 }
+
 .tag {
   color: #000;
   line-height: 1.6;
@@ -224,11 +258,13 @@ a {
   width: 150px;
   white-space: nowrap;
 }
+
 .tag_two {
   color: #999;
   line-height: 1.6;
   display: block;
 }
+
 .newlist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -242,6 +278,7 @@ a {
   bottom: 7.5px;
   position: relative;
 }
+
 .listen {
   display: flex;
   align-items: center;
@@ -252,12 +289,15 @@ a {
   position: absolute;
   color: #999;
 }
+
 .icon_play_new {
   margin-right: 5px;
 }
+
 .tag1:hover {
   color: var(--primary-color);
 }
+
 .tag2:hover {
   color: var(--primary-color);
 }

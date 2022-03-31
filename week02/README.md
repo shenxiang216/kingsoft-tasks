@@ -1,6 +1,6 @@
 ## week02
 
-
+[线上部署地址](https://week02-kingsoft-tasks.vercel.app/)
 
 ### 一、任务思路
 

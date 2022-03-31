@@ -61,4 +61,4 @@
 * 文件命名、各种变量命名尽可能规范,增加代码可读性
 * 看了一遍红宝书并没有太懂,准备进行第二次阅读
 * 下周计划复习下之前整理的nginx原理知识
-* [在线预览(通过vercel deploy,代码未打包压缩,可能影响访问速度)](https://kingsoft-tasks-enhazb3dd-shenxiang216.vercel.app/)
+* [在线预览(通过vercel deploy,代码未打包压缩,可能影响访问速度)](https://kingsoft-tasks.vercel.app/)
