@@ -302,6 +302,10 @@ a {
   color: var(--primary-color);
 }
 
+.tag_two_new{
+  margin-right: 5px;
+}
+
 footer {
   background: #333;
   height: 200px;
