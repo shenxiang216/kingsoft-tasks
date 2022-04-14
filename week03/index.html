@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>week03_赵亚鑫</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="icon" type="image/x-icon" href="./imgs/avatar-05.png" />
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header>
+    <img src="imgs/icon-menu.svg" alt="icon-menu" width="18" class="open" />
+    <img src="imgs/icon-close.svg" alt="icon-close.svg" width="24" class="close" />
+    <img src="imgs/logo-black.svg" alt="logo-black" width="76.5" />
+    <div class="nav">
+      <a href="#" class="nav-item">Inspiration</a>
+      <a href="#" class="nav-item">Find Work</a>
+      <a href="#" class="nav-item">Learn Design</a>
+      <a href="#" class="nav-item">Go Pro</a>
+      <a href="#" class="nav-item">Hire Designers</a>
+    </div>
+    <a href="#">Sign in</a>
+    <button class="sign-up">Sign up</button>
+  </header>
+  <!-- 上方 -->
+  <div class="top">
+    <div class="top-container">
+      <img src="imgs/banner.webp" alt="banner" class="banner" />
+      <div class="top-content">
+        <h1>Discover the world’s top designers & creatives</h1>
+        <p class="top-text">Dribbble is the leading destination to find & showcase creative work and home to the world's
+          best design professionals.</p>
+        <a href="#" class="sign-up">Sign up</a>
+      </div>
+    </div>
+  </div>
+  <!-- 主体 -->
+  <main>
+    <div class="list">
+  </main>
+  <!-- 尾部 -->
+  <footer>
+    <div class="footer-container">
+      <img src="imgs/logo-red.svg" alt="logo-red" />
+      <p>
+        Dribbble is the world’s leading community for creatives to share, grow, and get hired.
+      </p>
+    </div>
+  </footer>
+  <!-- 点击展示遮罩层 -->
+  <script>
+    const open = document.querySelector('.open')
+    const close = document.querySelector('.close')
+    const header = document.querySelector('header')
+    const body = document.querySelector('body')
+    open.onclick = function () {
+      header.className = 'opened'
+      // 隐藏滚动条，禁止滚动
+      body.style.overflow = 'hidden'
+    }
+    close.onclick = function () {
+      header.className = ''
+      body.style.overflow = ''
+    }
+  </script>
+  <!-- 模板 -->
+  <script type="text/template" id="tpl">
+    <div>
+      <img src="{{cover}}" class="item-cover" alt="{{cover}}" />
+      <div class="item-detail">
+        <img src="{{avatar}}" class="item-avatar" alt="{{avatar}}" />
+        <span class="item-name">{{name}}</span>
+        <span class="item-badge">{{badge}}</span>
+        <div class="item-status">
+          <img src="imgs/icon-like.svg" width="14" alt="imgs/icon-like.svg" />
+          <span>{{likes}}</span>
+          <img src="imgs/icon-view.svg" width="14" alt="imgs/icon-view.svg" />
+          <span>{{views}}</span>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- 自动读取数据 -->
+  <script src="./scripts/index.js"></script>
+  <script type="text/javascript">
+    let data = [];
+    (async function () {
+      await readTextFile("data/task.json", function (text) {
+        data = Array.from(JSON.parse(text))
+        let tpl = document.getElementById('tpl').innerHTML
+        let html = data.map(item => {
+          let result = tpl.replace('{{cover}}', item.cover)
+            .replace('{{cover}}', item.cover)
+            .replace('{{avatar}}', item.avatar)
+            .replace('{{avatar}}', item.avatar)
+            .replace('{{name}}', item.name)
+            .replace('{{badge}}', item.badge)
+            .replace('{{likes}}', item.likes)
+            .replace('{{views}}', item.views)
+          return result
+        }).join('')
+        document.querySelector('.list').innerHTML = html
+      })
+    })()
+  </script>
+</body>
+
+</html>

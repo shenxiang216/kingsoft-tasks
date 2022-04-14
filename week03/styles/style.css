@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  color: #0d0c22;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  box-shadow: inset 0px -1px 0px #f3f3f4;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  color: #6e6d7a;
+  text-decoration: none;
+}
+
+header .sign-up {
+  display: none;
+  margin-left: 20px;
+}
+
+.open {
+  margin-right: 35px;
+}
+
+.close {
+  display: none;
+  margin-right: 28px;
+}
+
+.nav {
+  display: flex;
+  visibility: hidden;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 23px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+}
+
+.nav-item {
+  font-size: 18px;
+  line-height: 2.6em;
+  font-weight: bold;
+  color: #6e6d7a;
+}
+
+.opened .nav {
+  visibility: visible;
+}
+
+.opened .open {
+  display: none;
+}
+
+.opened .close {
+  display: block;
+}
+
+.top {
+  background: #f9f8fd;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.banner {
+  max-width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+.top-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 625px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #000;
+  line-height: 1.25em;
+  margin: 0;
+}
+
+.top-text {
+  margin: 16px 0;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.sign-up {
+  display: inline-block;
+  background: #ea4c89;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 0;
+}
+
+.sign-up:hover {
+  background: #f082ac;
+}
+
+main {
+  padding: 20px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 36px;
+}
+
+.item-cover {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.item-detail {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.item-avatar {
+  width: 24px;
+  border-radius: 12px;
+  margin-right: 8px;
+}
+
+.item-name {
+  font-weight: 500;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+.item-badge {
+  background: #ccc;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 2px 3px;
+  text-transform: uppercase;
+}
+
+.item-status {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 12px;
+  font-weight: 500;
+  color: #9e9ea7;
+}
+
+.item-status img {
+  margin: 0 6px;
+}
+
+footer {
+  padding: 45px 20px;
+  background: #fafafb;
+}
+
+.footer-container {
+  margin: auto;
+}
+
+.footer-container img {
+  width: 104px;
+}
+
+.footer-container p {
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-top: 30px;
+  max-width: 256px;
+  color: #3d3d4e;
+}
+
+@media screen and (min-width: 768px) {
+  .top {
+    padding: 40px 32px;
+  }
+
+  .top-container {
+    flex-direction: row-reverse;
+  }
+
+  .top-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  main {
+    padding: 32px;
+  }
+
+  footer {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .footer-container {
+    max-width: 1600px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  header {
+    position: static;
+    height: 80px;
+  }
+
+  header .sign-up {
+    display: inline-block;
+  }
+
+  .open,
+  .close,
+  .opened .close {
+    display: none;
+  }
+
+  .nav {
+    visibility: visible;
+    position: static;
+    flex-direction: row;
+    flex: 1;
+    padding: 0 36px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 36px;
+  }
+
+  .nav-item:hover {
+    color: #ea4c89;
+  }
+
+  .top {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .top {
+    padding: 55px 76px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .banner {
+    width: 510px;
+    height: auto;
+  }
+
+  main {
+    padding: 32px 76px;
+  }
+
+  footer {
+    padding: 68px 76px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

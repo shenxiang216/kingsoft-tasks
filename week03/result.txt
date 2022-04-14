@@ -1,0 +1,41 @@
+C:\Users\76812\Desktop\2022-React\tasks\week03
+├─index.html
+├─README.md
+├─styles
+|   └style.css
+├─scripts
+|    └index.js
+├─imgs
+|  ├─avatar-01.jpg
+|  ├─avatar-02.png
+|  ├─avatar-03.jpg
+|  ├─avatar-04.gif
+|  ├─avatar-05.png
+|  ├─avatar-06.jpg
+|  ├─avatar-07.png
+|  ├─avatar-08.png
+|  ├─avatar-09.jpg
+|  ├─avatar-10.png
+|  ├─avatar-11.jpg
+|  ├─avatar-12.jpg
+|  ├─banner.webp
+|  ├─cover-01.jpg
+|  ├─cover-02.png
+|  ├─cover-03.jpg
+|  ├─cover-04.png
+|  ├─cover-05.png
+|  ├─cover-06.png
+|  ├─cover-07.png
+|  ├─cover-08.jpg
+|  ├─cover-09.png
+|  ├─cover-10.png
+|  ├─cover-11.jpg
+|  ├─cover-12.png
+|  ├─icon-close.svg
+|  ├─icon-like.svg
+|  ├─icon-menu.svg
+|  ├─icon-view.svg
+|  ├─logo-black.svg
+|  └logo-red.svg
+├─data
+|  └task.json
