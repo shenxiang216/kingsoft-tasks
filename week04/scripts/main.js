@@ -2,7 +2,7 @@
  * @Author: 赵亚鑫Deep Lane
  * @Date: 2022-04-16 10:27:10
  * @LastEditors: 赵亚鑫Deep Lane
- * @LastEditTime: 2022-04-19 14:44:39
+ * @LastEditTime: 2022-04-19 15:31:50
  * @Description:
  */
 import * as request from './request.js';
@@ -81,7 +81,6 @@ function createList() {
             let album = document.createElement('div');
             // 列表项cover
             let cover = document.createElement('a');
-            cover.href = '#';
             cover.className = 'cover-wrap';
             // 列表项cover图片
             let coverImg = document.createElement('img');

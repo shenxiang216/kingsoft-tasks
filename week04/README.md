@@ -1,5 +1,5 @@
 # week04-赵亚鑫-作业思路和问题
-[线上访问]()
+[线上访问](https://shenxiang216.github.io/kingsoft-tasks/week04/)
 > 点击链接可直接访问本周任务部署后的网站
 ## 作业思路
 * 作业为仿写简化版的QQ音乐新碟页面，主要练习 `TypeScript` 以及 `DOM` API的使用，要求使用动态创建 `DOM` 的方式来实现页面
