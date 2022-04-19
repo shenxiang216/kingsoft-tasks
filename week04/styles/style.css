@@ -1,0 +1,164 @@
+:root {
+  --primary-color: #31c27c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f6f6;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+header {
+  background: #fff;
+}
+
+.header-inner {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.tab-item {
+  display: inline-block;
+  padding: 0 8px;
+  margin-right: 24px;
+  line-height: 26px;
+  color: #000;
+  text-decoration: none;
+}
+
+.tab-active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.tab-item:not(.tab-active):hover {
+  color: var(--primary-color);
+}
+
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 45px 20px;
+}
+
+.cover-wrap {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cover-img {
+  width: 100%;
+  transition: all 0.75s;
+}
+
+.cover-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.cover-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -35px;
+  margin-top: -35px;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.5s;
+}
+
+.cover-wrap:hover .cover-mask {
+  opacity: 0.2;
+}
+
+.cover-wrap:hover .cover-play {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cover-wrap:hover .cover-img {
+  transform: scale(1.07);
+}
+
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 3px;
+}
+
+.album-title {
+  width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.album-title:hover {
+  color: var(--primary-color);
+}
+
+.album-author {
+  display: block;
+  color: #999;
+  line-height: 1.6;
+}
+
+.album-author:hover {
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 1280px) {
+  .header-inner {
+    height: 90px;
+    width: 1200px;
+    margin: auto;
+    justify-content: flex-start;
+  }
+
+  main {
+    width: 1200px;
+    padding: 20px 0;
+    margin: auto;
+  }
+}
